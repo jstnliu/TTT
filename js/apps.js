@@ -1,4 +1,7 @@
 // 1) Define required constants:
+//   BONUS CONSTANTS
+    const RESETGAME = document.getElementById('reset');
+    const MESSAGE_BOARD = document.getElementById('message-board')
 //   1.1) Define a colors object with keys of 'null' (when the square is empty), and players 1 & -1. The value assigned to each key represents the color to display for an empty square (null), player 1 and player -1.
     const colors = {
         'null': 'white',
@@ -61,6 +64,7 @@
         isWinner = ''; 
         render();
     }
+    
         //   4.2) Render those state variables to the page:
     function render(){
 
@@ -74,18 +78,25 @@
 
             //      4.2.1.1.3) Set the background color of the current element by using the value as a key on the colors lookup object (constant).
             tileDisplay.style.backgroundColor = colors[tileValue];
-            
-            displayMessage();
         }
+        displayMessage();
     }
 
         //     4.2.2) Render a message:
-    function displayMessage(){
-        //       4.2.2.1) If winner has a value other than null (game still in progress), render whose turn it is - use the color name for the player, converting it to upper case.
-        //       4.2.2.2) If winner is equal to 'T' (tie), render a tie message.
-        //       4.2.2.3) Otherwise, render a congratulatory message to which player has won - use the color name for the player, converting it to uppercase.
-        //   4.3) Wait for the user to click a square
+    function displayMessage(isWinner){
+        if (isWinner === colors['null']) {
+            //    4.2.2.1) If winner has a value other than null (game still in progress), render whose turn it is - use the color name for the player, converting it to upper case.
 
+        } if else (isWinner === colors['1'] || isWinner === colors[-1]) {
+            //    4.2.2.3) Otherwise, render a congratulatory message to which player has won - use the color name for the player, converting it to uppercase.
+       
+        } else {
+            //    4.2.2.2) If winner is equal to 'T' (tie), render a tie message.
+
+        }
+        tileValue.addEventListener('click', handleClick);
+        //   4.3) Wait for the user to click a square
+        
     }
 
 
@@ -111,3 +122,4 @@
 
 // 6) Handle a player clicking the replay button:
 //   6.1) Do steps 4.1 (initialize the state variables) and 4.2 (render).
+    RESETGAME.addEventListener('click', initializeGame);
