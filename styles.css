@@ -1,0 +1,46 @@
+html {
+    font-family: arial, sans-serif;
+    background-color: lightgray
+}
+#title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+}
+
+#reset {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px; 
+}
+
+table {
+    border-collapse: separate;
+    border: black solid 3.5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+td {
+    border: 2px solid rgb(65, 59, 131);
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+#player1 {
+    text-align: left;
+    
+}
+
+#player2 {
+    text-align: right;
+}
